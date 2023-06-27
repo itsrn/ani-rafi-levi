@@ -4,6 +4,7 @@ Random sentence of "Rafi Levi", from Zehu Ze (or some senteces I made up). Deplo
 ## ⚙ Technologies used
 - React
 - Nextjs
+- Tailwindcss
 - react-hot-toast
 
 ## ✨ API
