@@ -1,21 +1,26 @@
 "use client";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
+import first_part from "./api/first_part.json";
+import second_part from "./api/second_part.json";
+import episodes from "./api/episodes.json";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
   const [firstPart, setFirstPart] = useState("");
   const [secondPart, setSecondPart] = useState("");
   const [episode, setEpisode] = useState("");
-
-  const handleButtonClick = async () => {
-    const response = await fetch("/api");
-    const jsonData = await response.json();
-    setFirstPart(jsonData.first);
-    setSecondPart(jsonData.second);
-    setEpisode(jsonData.episode);
-    setShowText(true);
-  };
+  
+  function handleButtonClick(): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      var randomIndex = Math.floor(Math.random() * first_part.length);
+      setFirstPart(first_part[randomIndex]);
+      setSecondPart(second_part[randomIndex]);
+      setEpisode(episodes[randomIndex]);
+      resolve();
+      setShowText(true);
+    });
+  }
 
   return (
     <div className="flex min-h-screen flex-col items-center bg-[#cbe7fc] text-right p-3 gap-y-3">
@@ -36,7 +41,7 @@ export default function Home() {
               toast.promise(handleButtonClick(), {
                 loading: "...טוען משפט",
                 success: "!המשפט נטען",
-                error: ".קרתה תקלה"
+                error: ".קרתה תקלה",
               });
             }}
           >
