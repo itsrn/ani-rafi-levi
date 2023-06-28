@@ -25,9 +25,7 @@ There are 3 JSON files in the `/api` directory (although there is no API, I do p
 When a user clicks on the button in the website a number between 1 and the length of the `first_part.json` file is chosen and then it shows the index of the string from 3 of these arrays. Pretty simple. 
 
 ## 🙏 Credits
-Thanks Shirley for the idea to this website.
 
-## 📑 Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
