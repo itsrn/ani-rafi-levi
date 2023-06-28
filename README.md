@@ -6,6 +6,7 @@ Random sentence of "Rafi Levi", from Zehu Ze (or some senteces I made up). Deplo
 - Nextjs
 - Tailwindcss
 - react-hot-toast
+- next-share
 
 ## 🚀 Building locally
 - Clone the repo

@@ -4,13 +4,14 @@ import { Toaster, toast } from "react-hot-toast";
 import first_part from "./api/first_part.json";
 import second_part from "./api/second_part.json";
 import episodes from "./api/episodes.json";
+import { WhatsappShareButton } from "next-share";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
   const [firstPart, setFirstPart] = useState("");
   const [secondPart, setSecondPart] = useState("");
   const [episode, setEpisode] = useState("");
-  
+
   function handleButtonClick(): Promise<void> {
     return new Promise<void>((resolve, reject) => {
       var randomIndex = Math.floor(Math.random() * first_part.length);
@@ -48,24 +49,39 @@ export default function Home() {
             קבלו משפט
           </button>
           {showText && (
-            <p className="mt-4 text-3xl text-[#1311da] w-2/3 text-center">
-              אני רפי לוי, בילדותי לא היה לנו{" "}
-              <span className="underline decoration-white font-bold">
-                {firstPart}
-              </span>
-              , אז {"  "}
-              <span className="underline decoration-white font-bold">
-                {secondPart}
-              </span>
-              {"  "}
-              <span className="text-xl opacity-50">({episode})</span>
-            </p>
+            <>
+              <p className="mt-4 text-3xl text-[#1311da] w-2/3 text-center">
+                אני רפי לוי, בילדותי לא היה לנו{" "}
+                <span className="underline decoration-white font-bold">
+                  {firstPart}
+                </span>
+                , אז {"  "}
+                <span className="underline decoration-white font-bold">
+                  {secondPart}
+                </span>
+                {"  "}
+                <span className="text-xl opacity-50">({episode})</span>
+              </p>
+              <br></br>
+              <WhatsappShareButton
+                url={"https://ani-rafi-levi.vercel.app/"}
+                title={`"אני רפי לוי. בילדותי, לא היה לנו ${firstPart}, אז ${secondPart}."(רפי לוי, זהו זה, ${episode}). מוזמנים לנסות גם ולקבל משפט רנדומלי של רפי לוי!`}
+                separator=" | "
+              >
+                <button
+                  className="bg-[#1311da] text-white px-4 py-2 rounded text-xl"
+                  onClick={() => {}}
+                >
+                  שתפו בווטסאפ
+                </button>
+              </WhatsappShareButton>
+            </>
           )}
         </div>
       </main>
       <footer className="bg-[#cbe7fc] py-4 text-[#1311da] text-xl text-center">
-        .נוצר על ידי רון נוס, בהשראת הרעיון של שירלי, תשפ&#34;ג | {"  "}
-        {/* צריך להשתמש ב&#34; כי בריאקט אסור להשתמש במירכאות רגילות */}
+        נוצר על ידי רון נוס, בהשראת הרעיון של שירלי, תשפ&#34;ג | {"  "}
+        {/* עדיף להשתמש ב&#34; במקום להשתמש במירכאות רגילות  */}
         <a href="https://github.com/itsrn/ani-rafi-levi" target="_blank">
           לצפייה בקוד האתר בגיטהאב
         </a>
