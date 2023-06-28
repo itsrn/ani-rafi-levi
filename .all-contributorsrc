@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "itsrn",
+      "name": "Ron Nuss",
+      "avatar_url": "https://avatars.githubusercontent.com/u/132187043?v=4",
+      "profile": "https://itsron.space",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "ani-rafi-levi",
+  "projectOwner": "itsrn"
+}
