@@ -23,3 +23,14 @@ When a user clicks on the button in the website a number between 1 and the lengt
 
 ## 🙏 Credits
 Thanks Shirley for the idea to this website.
+
+## 📑 Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
